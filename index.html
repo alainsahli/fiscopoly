@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="de-CH">
+<html lang="de-CH" ng-app="fiscopolyApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fiscopoly</title>
 
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="fiscopoly.css">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="fiscopoly.js"></script>
 </head>
 <body>
 <div class="navbar" role="navigation">
@@ -34,16 +36,73 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" ng-controller="BoardCtrl">
+    <table>
+        <tr>
+            <td><field class="corner" field="fields[20]"></field></td>
+            <td><field class="portrait" field="fields[21]"></field></td>
+            <td><field class="portrait" field="fields[22]"></field></td>
+            <td><field class="portrait" field="fields[23]"></field></td>
+            <td><field class="portrait" field="fields[24]"></field></td>
+            <td><field class="portrait" field="fields[25]"></field></td>
+            <td><field class="portrait" field="fields[26]"></field></td>
+            <td><field class="portrait" field="fields[27]"></field></td>
+            <td><field class="portrait" field="fields[28]"></field></td>
+            <td><field class="portrait" field="fields[29]"></field></td>
+            <td><field class="corner" field="fields[30]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[19]"></field></td>
+            <td colspan="9" rowspan="9"></td>
+            <td><field class="landscape" field="fields[31]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[18]"></field></td>
+            <td><field class="landscape" field="fields[32]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[17]"></field></td>
+            <td><field class="landscape" field="fields[33]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[16]"></field></td>
+            <td><field class="landscape" field="fields[34]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[15]"></field></td>
+            <td><field class="landscape" field="fields[35]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[14]"></field></td>
+            <td><field class="landscape" field="fields[36]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[13]"></field></td>
+            <td><field class="landscape" field="fields[37]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[12]"></field></td>
+            <td><field class="landscape" field="fields[38]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="landscape" field="fields[11]"></field></td>
+            <td><field class="landscape" field="fields[39]"></field></td>
+        </tr>
+        <tr>
+            <td><field class="corner" field="fields[10]"></field></td>
+            <td><field class="portrait" field="fields[9]"></field></td>
+            <td><field class="portrait" field="fields[8]"></field></td>
+            <td><field class="portrait" field="fields[7]"></field></td>
+            <td><field class="portrait" field="fields[6]"></field></td>
+            <td><field class="portrait" field="fields[5]"></field></td>
+            <td><field class="portrait" field="fields[4]"></field></td>
+            <td><field class="portrait" field="fields[3]"></field></td>
+            <td><field class="portrait" field="fields[2]"></field></td>
+            <td><field class="portrait" field="fields[1]"></field></td>
+            <td><field class="corner"  field="fields[0]"></field></td>
+        </tr>
+    </table>
 
-    <canvas id="board" class="center-block">
-
-    </canvas>
-
-</div><!-- /.container -->
-
-<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="fisco.js"></script>
+</div>
 </body>
 </html>
