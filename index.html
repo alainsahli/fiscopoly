@@ -12,6 +12,7 @@
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
     <script src="fiscopoly.js"></script>
 </head>
 <body ng-cloak>
@@ -39,7 +40,10 @@
 <div class="container" ng-controller="BoardCtrl">
 
     <svg id="board" width="100%" height="1000">
-        <field ng-repeat="field in fields" field="field"></field>
+        <field ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'S'}" field="field"></field>
+        <field-west ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'W'}" field="field"></field-west>
+        <field ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'N'}" field="field"></field>
+        <field-east ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'E'}" field="field"></field-east>
     </svg>
 </div>
 </body>

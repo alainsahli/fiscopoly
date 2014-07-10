@@ -1,8 +1,8 @@
 <svg ng-attr-x="{{field.x}}" ng-attr-y="{{field.y}}">
-    <rect class="field" style="" width="64" height="96"></rect>
+    <rect class="field" width="64" height="96"></rect>
     <rect class="fieldRibbon" width="64" height="25" ng-class="field.group" ng-if="showRibbon"></rect>
-    <text x="32" y="40" text-anchor="middle" >
+    <text x="32" ng-attr-y="{{textY}}" text-anchor="middle" >
         <tspan>{{field.name1}}</tspan>
-        <tspan x="32" dy="15">{{field.name2}}</tspan>
+        <tspan x="32" dy="-56">{{field.name2}}</tspan>
     </text>
 </svg>
