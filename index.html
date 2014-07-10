@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
     <script src="fiscopoly.js"></script>
 </head>
-<body>
+<body ng-cloak>
 <div class="navbar" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -37,72 +37,10 @@
 </div>
 
 <div class="container" ng-controller="BoardCtrl">
-    <table>
-        <tr>
-            <td><field class="corner" field="fields[20]"></field></td>
-            <td><field class="portrait" field="fields[21]"></field></td>
-            <td><field class="portrait" field="fields[22]"></field></td>
-            <td><field class="portrait" field="fields[23]"></field></td>
-            <td><field class="portrait" field="fields[24]"></field></td>
-            <td><field class="portrait" field="fields[25]"></field></td>
-            <td><field class="portrait" field="fields[26]"></field></td>
-            <td><field class="portrait" field="fields[27]"></field></td>
-            <td><field class="portrait" field="fields[28]"></field></td>
-            <td><field class="portrait" field="fields[29]"></field></td>
-            <td><field class="corner" field="fields[30]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[19]"></field></td>
-            <td colspan="9" rowspan="9"></td>
-            <td><field class="landscape" field="fields[31]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[18]"></field></td>
-            <td><field class="landscape" field="fields[32]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[17]"></field></td>
-            <td><field class="landscape" field="fields[33]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[16]"></field></td>
-            <td><field class="landscape" field="fields[34]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[15]"></field></td>
-            <td><field class="landscape" field="fields[35]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[14]"></field></td>
-            <td><field class="landscape" field="fields[36]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[13]"></field></td>
-            <td><field class="landscape" field="fields[37]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[12]"></field></td>
-            <td><field class="landscape" field="fields[38]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="landscape" field="fields[11]"></field></td>
-            <td><field class="landscape" field="fields[39]"></field></td>
-        </tr>
-        <tr>
-            <td><field class="corner" field="fields[10]"></field></td>
-            <td><field class="portrait" field="fields[9]"></field></td>
-            <td><field class="portrait" field="fields[8]"></field></td>
-            <td><field class="portrait" field="fields[7]"></field></td>
-            <td><field class="portrait" field="fields[6]"></field></td>
-            <td><field class="portrait" field="fields[5]"></field></td>
-            <td><field class="portrait" field="fields[4]"></field></td>
-            <td><field class="portrait" field="fields[3]"></field></td>
-            <td><field class="portrait" field="fields[2]"></field></td>
-            <td><field class="portrait" field="fields[1]"></field></td>
-            <td><field class="corner"  field="fields[0]"></field></td>
-        </tr>
-    </table>
 
+    <svg id="board" width="100%" height="1000">
+        <field ng-repeat="field in fields" field="field"></field>
+    </svg>
 </div>
 </body>
 </html>
