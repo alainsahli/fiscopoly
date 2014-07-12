@@ -44,6 +44,7 @@
         <field-west ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'W'}" field="field"></field-west>
         <field ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'N'}" field="field"></field>
         <field-east ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'E'}" field="field"></field-east>
+        <corner ng-repeat="field in fields | filter: {type: 'corner'}" field="field"></corner>
     </svg>
 </div>
 </body>

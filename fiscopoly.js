@@ -30,10 +30,14 @@ angular.module('fiscopolyApp', [])
                     this.orientation = 'N';
                     this.x = uiConstants.fieldHeight + (number - 21) * uiConstants.fieldWidth;
                     this.y = 0;
-                } else if(number > 10) {
+                } else if(number >= 10) {
                     this.orientation = 'W';
                     this.x = 0;
-                    this.y = uiConstants.fieldHeight + (uiConstants.fieldsPerRow - (number - 10)) * uiConstants.fieldWidth;
+                    if(number === 20) {
+                        this.y = 0;
+                    } else {
+                        this.y = uiConstants.fieldHeight + (uiConstants.fieldsPerRow - (number - 10)) * uiConstants.fieldWidth;
+                    }
                 } else {
                     this.orientation = 'S';
                     this.x = uiConstants.fieldHeight + (uiConstants.fieldsPerRow - number) * uiConstants.fieldWidth;
@@ -128,6 +132,16 @@ angular.module('fiscopolyApp', [])
                 scope.showRibbon = scope.field.isSystem();
                 scope.textY = scope.showRibbon ? 40 : 15;
             }
+        };
+    })
+    .directive('corner', function(uiConstants, $log) {
+        return {
+            restrict: 'E',
+            replace: true,
+            scope: {
+                field: '='
+            },
+            templateUrl: 'corner.html'
         };
     })
     ;
