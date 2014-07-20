@@ -22,10 +22,8 @@
 ## Additional for IntelliJ
 out/
 
-#Gradle
-.gradle/
-build/
+## Maven
+target/
 
-
-
+## Bower
 src/main/resources/static/bower_components/
