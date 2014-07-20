@@ -31,14 +31,45 @@
 </div>
 
 <div class="container" ng-controller="BoardCtrl">
-
-    <svg id="board" width="100%" height="1000">
-        <field ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'S'}" field="field"></field>
-        <field-west ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'W'}" field="field"></field-west>
-        <field ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'N'}" field="field"></field>
-        <field-east ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'E'}" field="field"></field-east>
-        <corner ng-repeat="field in fields | filter: {type: 'corner'}" field="field"></corner>
-    </svg>
+    <div class="row">
+        <div class="col-lg-9">
+            <svg id="board" width="768" height="768">
+                <field ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'S'}" field="field"></field>
+                <field-west ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'W'}"
+                            field="field"></field-west>
+                <field ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'N'}" field="field"></field>
+                <field-east ng-repeat="field in fieldsExceptCorners | filter: {orientation: 'E'}"
+                            field="field"></field-east>
+                <corner ng-repeat="field in fields | filter: {type: 'corner'}" field="field"></corner>
+                <player ng-repeat="player in players" player="player"></player>
+            </svg>
+        </div>
+        <div class="col-lg-3">
+            <table class="table">
+                <caption>Spieler</caption>
+                <thead>
+                <tr>
+                    <th>Farbe</th>
+                    <th>Name</th>
+                    <th>Manntage</th>
+                    <th>Feld</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="player in players">
+                    <td style="background-color: {{player.color}}"></td>
+                    <td>{{player.name}}</td>
+                    <td>{{player.money | number}} MT</td>
+                    <td>{{player.fieldNumber}}</td>
+                </tr>
+                </tbody>
+            </table>
+            <div>
+                <button type="button" class="btn btn-default" ng-click="rollDiceAndMove()">Würfeln</button>
+                Würfel: {{lastDices.die1}}+{{lastDices.die2}}={{lastDices.die1 + lastDices.die2}}
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
