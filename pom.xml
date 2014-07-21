@@ -42,24 +42,25 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.3.1</version>
-                <executions>
-                    <execution>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <executable>grunt</executable>
-                    <workingDirectory>frontend</workingDirectory>
-                    <commandlineArgs>dist</commandlineArgs>
-                </configuration>
-            </plugin>
+            <!-- TODO call grunt dist once it is done -->
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>exec-maven-plugin</artifactId>-->
+                <!--<version>1.3.1</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>generate-resources</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>exec</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<configuration>-->
+                    <!--<executable>grunt</executable>-->
+                    <!--<workingDirectory>frontend</workingDirectory>-->
+                    <!--<commandlineArgs>dist</commandlineArgs>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
 
     </build>
