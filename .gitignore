@@ -25,5 +25,6 @@ out/
 ## Maven
 target/
 
-## Bower
-src/main/resources/static/bower_components/
+frontend/node_modules
+frontend/vendor
+frontend/build

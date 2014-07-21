@@ -55,8 +55,9 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <executable>bower</executable>
-                    <commandlineArgs>install</commandlineArgs>
+                    <executable>grunt</executable>
+                    <workingDirectory>frontend</workingDirectory>
+                    <commandlineArgs>dist</commandlineArgs>
                 </configuration>
             </plugin>
         </plugins>
