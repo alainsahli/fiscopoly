@@ -1,5 +1,6 @@
 # Setup UI
 To setup the frontend development environment execute following commands:
+
     cd frontend
     npm install
     grunt dev
